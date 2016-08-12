@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block custom_head%}
+  <link href={% static "css/members.css" %} rel="stylesheet">
+{% endblock %}
 
 {% block content %}
 <div class="ui segment">
   {% for group in member_groups %}
   <div class="ui dividing header">{{group.title}}</div>
-  <div class="ui three column grid">
+  <div class="ui four column grid">
     {% for member in group.members %}
     <div class="column">
       <div class="ui card">
@@ -12,9 +17,12 @@
           <img src={{member.photo.url}}>
         </div>
         <div class="content">
-          <a class="header">{{member.name}}</a>
+          <a class="header">{{member.name_en}}({{member.name_ch}})</a>
           <div class="meta">
-            <span>{{member.highest_edu}}</span>
+            <span>
+              <p>{{member.highest_edu_en}}</p>
+              <p>{{member.highest_edu_ch}}</p>
+            </span>
           </div>
           <div class="description">
             <p>Research Topic</p>
@@ -22,14 +30,14 @@
           </div>
         </div>
         <div class="extra content">
-          <p><a href="mailto://{{member.email}}">
+          <p><a href="mailto:{{member.email}}">
             <i class="mail icon"></i>
             {{member.email}}
           </a></p>
-          <p> <a href="mailto://{{member.email}}">
+          <p>
             <i class="phone icon"></i>
             {{member.tel}} #{{member.ext}}
-          </a></p>
+         </p>
         </div>
       </div>
     </div>
