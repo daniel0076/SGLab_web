@@ -6,4 +6,4 @@ from . import models
 
 @admin.register(models.Member)
 class MemberAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'tel', 'ext')
+    list_display = ('name_en', 'name_ch', 'identity', 'email', 'tel', 'ext')
