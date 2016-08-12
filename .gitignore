@@ -1,5 +1,7 @@
 *.swp
 .*.
+.*/
+db.*
 __pycache__/
 SGLab/
 migrations/

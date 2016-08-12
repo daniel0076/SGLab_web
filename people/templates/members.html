@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="ui segment">
+  {% for group in member_groups %}
+  <div class="ui dividing header">{{group.title}}</div>
+  <div class="ui three column grid">
+    {% for member in group.members %}
+    <div class="column">
+      <div class="ui card">
+        <div class="image">
+          <img src={{member.photo.url}}>
+        </div>
+        <div class="content">
+          <a class="header">{{member.name}}</a>
+          <div class="meta">
+            <span>{{member.highest_edu}}</span>
+          </div>
+          <div class="description">
+            <p>Research Topic</p>
+            <p>{{member.research_topic}}</p>
+          </div>
+        </div>
+        <div class="extra content">
+          <p><a href="mailto://{{member.email}}">
+            <i class="mail icon"></i>
+            {{member.email}}
+          </a></p>
+          <p> <a href="mailto://{{member.email}}">
+            <i class="phone icon"></i>
+            {{member.tel}} #{{member.ext}}
+          </a></p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
