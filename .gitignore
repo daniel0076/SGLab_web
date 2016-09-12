@@ -3,7 +3,7 @@
 .*/
 db.*
 __pycache__/
-SGLab/
+SGLab/settings.py
 migrations/
 static/*
 !static/css/
