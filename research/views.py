@@ -4,4 +4,5 @@ from . import models
 # Create your views here.
 
 def research(request):
-    return render(request, 'research.html', locals())
+    ui_ctrl = {'research':'active'}
+    return render(request, 'index.html', locals())

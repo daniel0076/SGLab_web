@@ -18,4 +18,6 @@ def members(request):
         {'title': 'Assistant', 'members': assistant},
     ]
 
+    ui_ctrl={'members':'active'}
+
     return render(request, 'members.html', locals())

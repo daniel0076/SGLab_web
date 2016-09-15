@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--
+  Hyperspace by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<html>
+  <head>
+    <title>Hyperspace by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href={% static 'css/main.css' %} />
+  </head>
+  <body>
+
+    <!-- Sidebar -->
+    <section id="sidebar">
+      <div class="inner">
+        <nav>
+          <ul>
+            <li><a href="#intro">衛星定軌 (satellite orbit determination)</a></li>
+            <li><a href="#one">衛星測高 (satellite altimetry)</a></li>
+            <li><a href="#two">重力測量</a></li>
+            <li><a href="#three">INSAR</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Intro -->
+      <section id="intro" class="wrapper style1 fullscreen fade-up">
+        <div class="inner">
+          <h1>衛星定軌 (satellite orbit determination)</h1>
+          </br><p>利用獲得之衛星追蹤觀測數據，進行衛星軌道的確定。傳統天體力學中，衛星定軌模型是一符合牛頓力學且無擾動的簡單二體問題，
+          惟現實中之定軌模型為一具有擾動的運動問題，故衛星真實軌道與運動微分方程所得之積分軌道間存有偏差。
+          為了獲得最接近真實軌道的積分軌道，必須根據大量的衛星觀測資料，同時考慮各項衛星擾動力
+          （如地球引力位、多體擾動、大氣阻力、太陽輻射壓、地球輻射壓、地球固體潮、海潮、相對論效應等）可能擾動偏差之影響，
+          利用參數計算方式進行精密衛星軌道的確定。</p>
+      </section>
+
+      <!-- One -->
+      <section id="one" class="wrapper style2 fullscreen fade-up">
+        <div class="inner">
+          <h1>衛星測高 (satellite altimetry)</h1>
+          </br><p>衛星測高技術自1969 年以來發展至今，已有四十多年的歷史。
+          其觀測原理是利用測高衛星上的測高儀連續發射雷達波至地球表面，再讓衛星上的接收裝置接收經由地表反射回來的回波，經量測這段時間差及返回的波形即可計算出衛星至地表的距離。起初，由於海水表面較為平滑穩定且對於雷達訊號反射率較好，因此測高衛星被用於測量海平面高度，目前對於海水面變化的研究越趨成熟，觀測精度可達公分級。而陸地表面因為有植被、建物等覆蓋，且對於雷達訊號反射率較差，造成測高衛星在陸地上觀測精度也相對較差，所以近年來學者們紛紛研究發展出如波型重定等較有效的演算法，來提升陸地觀測精度。由於測高衛星能提供連續、高精度且大範圍的資料，有助於監測海水面變化及研究海洋大地水準面、重力場異常等，近年來更因多位學者陸續發展各種波形重定演算法，因此也有學者開始利用衛星測高技術來研究冰層變化及地表高程變化等等。</p>
+      </section>
+      <!-- Two -->
+      <section id="two" class="wrapper style2 spotlights">
+        <section>
+          <div class="content">
+            <div class="inner">
+              <h2>What is "Gravimetry"?</h2>
+              <p>Gavimetry is a surveying technique to measure or observe strength of gravity field.
+              The unit of gravity is the "acceleration", which is represented as gal (10-2 metre per second squared),
+              mgal (10-5 metre per second squared) or μgal (10-8 metre per second squared)..
+              The main method to obtain gravity signals includes land-base, shipborne, airborne, satellite, and gravimetry.
+              The instruments for collecting gravity measurements are usually divided into relative, absolute,
+              and superconducting gravimeters. The information of gravity field is very useful for geophysics,
+              geodesy, oceanography, geology, and even national defense, etc. For geodesists,
+              the importance of the gravity is that it can help with obtaining a high quality geoid model;
+              For oceanographers, the gravity is useful for the investigation of currents, tides, and sea surface topography;
+              For geophysicists, the gravity can be used to understand the characteristics of the earth’s interior sources;
+              For geologists, the gravity is expected to aid in monitoring crustal deformation.
+              Therefore, gravity modeling with high accuracy is always a primary goal for geoscientists.</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="content">
+            <div class="inner">
+              <h2>Terrestrial Time-varying gravimetry</h2>
+              <h2>(時變重力)</h2>
+              <p>The contemporary development of time-varying gravimetry is an offspring
+              from the static gravimetry thanks to introduction of new generation of gravimeters,
+              which are far more capable in terms of precision, stability and temporal consistency.
+              These features extend the data spectrum to study the Earth since migrations of mass in the deep or
+              deformation on surface leave its trace on gravitational signal,
+              which serve as valuable clues to answer more scientific secrecies.
+              As a result, no longer being confined to the missions for geodetic datum,
+              time-varying gravimetry can contribute much on exploring various dynamics of the Earth.</p>
+              </br><p>The Laboratory of Geodesy and Geodynamics houses and operates two kinds of
+              state-of-the-art time-varying gravimeters. First kind is the super-conducting gravimeter.
+              One of these observatory-based instruments, T48, is set up in the tunnel laboratory at Hsinchu,
+              while the other one, T49, is at a monitoring station on Mt. Yang-Ming.
+              Superconducting gravimeters have excellent performance (in terms of precision and drift) in the band
+              of the Earth tide and long wave length seismic signals.
+              Gravimetrical data collected within this band include the surficial signals such as tide,
+              atmospheric and hydrological effects, and also the signal form the deep Earth like core motion and
+              normal mode excited by Earthquake. The data collected by super-conducting gravimeters for the past years are precious records to study respective subject.  It has contributed remarkable result in a task to identify an active fault nearby T48 observatory.</p>
+              </br>
+              <p>The other kind of vital gravimeters in Laboratory of Geodesy and Geodynamics is the two
+              absolute gravimeters. Implementing the principal of a free-fall experiment,
+              an absolute gravimeter collect gravity observation of the bandwidth from Earth tide to the infinity.
+              It has the tremendous stability across the temporal domain which makes decent reference in time-varying
+              monitoring missions. Most important of all, it is mobile capable of shipping out to a site designated to
+              monitor a scientific event. Two absolute gravimeters, labeled #224 and #231 respectively,
+              are operating in the laboratory. These two instruments have been deployed around Taiwan for many scientific missions,
+              including the monitoring for Orogenic activities, land subsidence, and volcanic activities.
+              Recently, the employment of absolute gravimetry has shown an admirable potential in groundwater hydrology,
+              providing a new non-intrusive approach in monitoring the storage of aquifers.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Three -->
+      <section id="three" class="wrapper style3 fade-up">
+        <div class="inner">
+          <h2>待補</h2>
+        </div>
+      </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="wrapper style1-alt">
+          <div class="inner">
+            <ul class="menu">
+              <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+          </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src={% static "js/jquery.min.js" %}></script>
+        <script src={% static "js/jquery.scrollex.min.js"%}></script>
+        <script src={% static "js/jquery.scrolly.min.js"%}></script>
+        <script src={% static "js/skel.min.js"%}></script>
+        <script src={% static "js/util.js"%}></script>
+        <script src={% static "js/main.js"%}></script>
+
+  </body>
+</html>
+{% endblock %}

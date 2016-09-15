@@ -21,5 +21,5 @@ import research.views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^members/', people.views.members, name="members"),
-    url(r'^research/', research.views.research, name="researchs"),
+    url(r'^research/', research.views.research, name="research"),
 ]
