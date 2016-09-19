@@ -12,5 +12,9 @@
 
 .ui.secondary.pointing.menu{
   margin:auto;
-  margin-left:18em;
+  margin-left:20%;
+}
+
+#lab_title{
+  color:white;
 }
