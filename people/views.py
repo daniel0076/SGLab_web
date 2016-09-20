@@ -11,12 +11,12 @@ def members(request):
     phd = models.Member.objects.filter(identity='PhD Student')
     assistant = models.Member.objects.filter(identity='Assistant')
 
-    member_groups = [
-        {'title': 'Postdoc', 'members': postdoc},
-        {'title': 'PhD Student', 'members': phd},
-        {'title': 'Master Student', 'members': master},
-        {'title': 'Assistant', 'members': assistant},
-    ]
+    members = {
+        'postdoc': postdoc,
+        'phd' : phd,
+        'master' : master,
+        'assistant': assistant,
+    }
 
     ui_ctrl={'members':'active'}
 
