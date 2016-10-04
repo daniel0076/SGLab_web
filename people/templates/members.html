@@ -36,17 +36,15 @@
       <!-- Intro -->
       <section id="intro" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
-          <div class="ui dividing header">博士後研究 PostDoc</div>
+          <div class="ui dividing header">博士後研究 (PostDoc)</div>
           <table>
             {% for member in members.postdoc %}
             <tr>
-
               <td>
                 <div class="ui small image">
                   <img src={{member.photo.url}}>
                 </div>
               </td>
-
               <td class="info">
                 <h3 class="header">{{member.name_en}} ({{member.name_ch}})</h3>
                 <div class="education">
@@ -59,7 +57,6 @@
                     <p>{{member.research_topic}}</p>
                     {% endif %}
                 </div >
-
                   <p class="contact">
                   <a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a>
                   <span style="margin-left:2em"> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </span>
@@ -74,84 +71,71 @@
       <!-- One -->
       <section id="one" class="wrapper style2 fullscreen fade-up">
         <div class="inner">
-        <div class="ui dividing header">博士 (PhD)</div>
-          <div class="ui stackable four column stakable grid">
+          <div class="ui dividing header">博士 (PhD)</div>
+          <table>
             {% for member in members.phd %}
-            <div class="column">
-              <div class="ui card">
-                <div class="image">
+            <tr>
+              <td>
+                <div class="ui small image">
                   <img src={{member.photo.url}}>
                 </div>
-                <div class="content">
-                  <a class="header">{{member.name_en}}<br>({{member.name_ch}})</a>
-                  <div class="meta">
-                    <span>
-                      <p>{{member.highest_edu_en}}</p>
-                      <p>{{member.highest_edu_ch}}</p>
-                    </span>
-                  </div>
-                  <div class="description">
+              </td>
+              <td class="info">
+                <h3 class="header">{{member.name_en}} ({{member.name_ch}})</h3>
+                <div class="education">
+                  <p>{{member.highest_edu_en}}</p>
+                  <p>{{member.highest_edu_ch}}</p>
+                </div >
+                <div class="research_topic">
                     {% if member.research_topic %}</p>
                     <p><strong>Research Topic</strong></p>
                     <p>{{member.research_topic}}</p>
                     {% endif %}
-                  </div>
-                </div>
-                <div class="extra content">
-                  <p><a href="mailto:{{member.email}}">
-                    <i class="mail icon"></i>
-                    {{member.email}}
-                  </a></p>
-                  <p>
-                  <i class="phone icon"></i>
-                  {{member.tel}} #{{member.ext}}
+                </div >
+                  <p class="contact">
+                  <a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a>
+                  <span style="margin-left:2em"> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </span>
                   </p>
-                </div>
-              </div>
-            </div>
+              </td>
+            </tr>
             {% endfor %}
+          </table>
           </div>
       </section>
+
 
       <!-- Two -->
       <section id="two" class="wrapper style3 fullscreen fade-up">
         <div class="inner">
           <div class="ui dividing header">碩士 (Master)</div>
-          <div class="ui stackable four column stakable grid">
+          <table>
             {% for member in members.master %}
-            <div class="column">
-              <div class="ui card">
-                <div class="image">
+            <tr>
+              <td>
+                <div class="ui small image">
                   <img src={{member.photo.url}}>
                 </div>
-                <div class="content">
-                  <a class="header">{{member.name_en}}<br>({{member.name_ch}})</a>
-                  <div class="meta">
-                    <span>
-                      <p>{{member.highest_edu_en}}</p>
-                      <p>{{member.highest_edu_ch}}</p>
-                    </span>
-                  </div>
-                  <div class="description">
+              </td>
+              <td class="info">
+                <h3 class="header">{{member.name_en}} ({{member.name_ch}})</h3>
+                <div class="education">
+                  <p>{{member.highest_edu_en}}</p>
+                  <p>{{member.highest_edu_ch}}</p>
+                </div >
+                <div class="research_topic">
                     {% if member.research_topic %}</p>
                     <p><strong>Research Topic</strong></p>
                     <p>{{member.research_topic}}</p>
                     {% endif %}
-                  </div>
-                </div>
-                <div class="extra content">
-                  <p><a href="mailto:{{member.email}}">
-                    <i class="mail icon"></i>
-                    {{member.email}}
-                  </a></p>
-                  <p>
-                  <i class="phone icon"></i>
-                  {{member.tel}} #{{member.ext}}
+                </div >
+                  <p class="contact">
+                  <a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a>
+                  <span style="margin-left:2em"> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </span>
                   </p>
-                </div>
-              </div>
-            </div>
+              </td>
+            </tr>
             {% endfor %}
+          </table>
           </div>
       </section>
 
@@ -159,42 +143,35 @@
       <section id="three" class="wrapper style1 fade-up">
         <div class="inner">
         <div class="ui dividing header">助理 (Assistant)</div>
-          <div class="ui stackable four column stakable grid">
+          <table>
             {% for member in members.assistant %}
-            <div class="column">
-              <div class="ui card">
-                <div class="image">
+            <tr>
+              <td>
+                <div class="ui small image">
                   <img src={{member.photo.url}}>
                 </div>
-                <div class="content">
-                  <a class="header">{{member.name_en}}<br>({{member.name_ch}})</a>
-                  <div class="meta">
-                    <span>
-                      <p>{{member.highest_edu_en}}</p>
-                      <p>{{member.highest_edu_ch}}</p>
-                    </span>
-                  </div>
-                  <div class="description">
+              </td>
+              <td class="info">
+                <h3 class="header">{{member.name_en}} ({{member.name_ch}})</h3>
+                <div class="education">
+                  <p>{{member.highest_edu_en}}</p>
+                  <p>{{member.highest_edu_ch}}</p>
+                </div >
+                <div class="research_topic">
                     {% if member.research_topic %}</p>
                     <p><strong>Research Topic</strong></p>
                     <p>{{member.research_topic}}</p>
                     {% endif %}
-                  </div>
-                </div>
-                <div class="extra content">
-                  <p><a href="mailto:{{member.email}}">
-                    <i class="mail icon"></i>
-                    {{member.email}}
-                  </a></p>
-                  <p>
-                  <i class="phone icon"></i>
-                  {{member.tel}} #{{member.ext}}
+                </div >
+                  <p class="contact">
+                  <a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a>
+                  <span style="margin-left:2em"> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </span>
                   </p>
-                </div>
-              </div>
-            </div>
+              </td>
+            </tr>
             {% endfor %}
-          </div>
+          </table>
+        </div>
       </section>
 
         </div>
