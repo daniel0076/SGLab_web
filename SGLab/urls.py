@@ -22,4 +22,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^members/', people.views.members, name="members"),
     url(r'^research/', research.views.research, name="research"),
+    url(r'^home/', research.views.home, name="home"),
+    url(r'^generic/', research.views.generic, name="generic"),
 ]
