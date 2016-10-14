@@ -10,6 +10,3 @@ def research(request):
 def home(request):
     ui_ctrl = {'home':'active'}
     return render(request, 'home.html', locals())
-
-def generic(request):
-    return render(request, 'generic.html', locals())

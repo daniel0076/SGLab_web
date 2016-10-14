@@ -1,8 +1,8 @@
 <div id="navtop">
   <h1 class="ui header" id="lab_title">Space Geodesy Lab</h1>
   <p>National Chiao Tung University, Civil Engineering</p>
-  <div class="ui secondary pointing stackable inverted menu">
-    <a class="item">
+  <div class="ui secondary pointing stackable menu">
+    <a class="item {{ui_ctrl.index}}" href="{% url 'index' %}">
       <i class="home icon"></i>
       Home
     </a>
@@ -11,6 +11,7 @@
       Members
     </a>
     <a class="item {{ui_ctrl.research}}" href={% url 'research' %} >
+      <i class="lab icon"></i>
       Research
     </a>
   </div>

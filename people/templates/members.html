@@ -34,16 +34,14 @@
     <div id="wrapper">
 
       <!-- Intro -->
-      <section id="intro" class="wrapper style1 fullscreen fade-up">
+      <section class="wrapper style1 fullscreen fade-up">
         <div class="inner">
           <div class="ui dividing header">博士後研究 (PostDoc)</div>
-          <table>
+          <table class="ui transparent table">
             {% for member in members.postdoc %}
             <tr>
               <td>
-                <div class="ui small image">
-                  <img src={{member.photo.url}}>
-                </div>
+                <img class="ui small image" src={{member.photo.url}}>
               </td>
               <td class="info">
                 <h3 class="header">{{member.name_en}} ({{member.name_ch}})</h3>
@@ -57,10 +55,11 @@
                     <p>{{member.research_topic}}</p>
                     {% endif %}
                 </div >
-                  <p class="contact">
-                  <a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a>
-                  <span style="margin-left:2em"> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </span>
-                  </p>
+                <div class="contact">
+                  <p><strong>Contact</strong></p>
+                  <p><a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a></p>
+                  <p> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </p>
+                </div >
               </td>
             </tr>
             {% endfor %}
@@ -72,13 +71,11 @@
       <section id="one" class="wrapper style2 fullscreen fade-up">
         <div class="inner">
           <div class="ui dividing header">博士 (PhD)</div>
-          <table>
+          <table class="ui transparent table">
             {% for member in members.phd %}
             <tr>
               <td>
-                <div class="ui small image">
-                  <img src={{member.photo.url}}>
-                </div>
+                <img class="ui small image" src={{member.photo.url}}>
               </td>
               <td class="info">
                 <h3 class="header">{{member.name_en}} ({{member.name_ch}})</h3>
@@ -92,10 +89,11 @@
                     <p>{{member.research_topic}}</p>
                     {% endif %}
                 </div >
-                  <p class="contact">
-                  <a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a>
-                  <span style="margin-left:2em"> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </span>
-                  </p>
+                <div class="contact">
+                  <p><strong>Contact</strong></p>
+                  <p><a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a></p>
+                  <p> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </p>
+                </div >
               </td>
             </tr>
             {% endfor %}
@@ -108,13 +106,11 @@
       <section id="two" class="wrapper style3 fullscreen fade-up">
         <div class="inner">
           <div class="ui dividing header">碩士 (Master)</div>
-          <table>
+          <table class="ui transparent table">
             {% for member in members.master %}
             <tr>
               <td>
-                <div class="ui small image">
-                  <img src={{member.photo.url}}>
-                </div>
+                <img class="ui small image" src={{member.photo.url}}>
               </td>
               <td class="info">
                 <h3 class="header">{{member.name_en}} ({{member.name_ch}})</h3>
@@ -128,10 +124,11 @@
                     <p>{{member.research_topic}}</p>
                     {% endif %}
                 </div >
-                  <p class="contact">
-                  <a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a>
-                  <span style="margin-left:2em"> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </span>
-                  </p>
+                <div class="contact">
+                  <p><strong>Contact</strong></p>
+                  <p><a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a></p>
+                  <p> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </p>
+                </div >
               </td>
             </tr>
             {% endfor %}
@@ -143,13 +140,11 @@
       <section id="three" class="wrapper style1 fade-up">
         <div class="inner">
         <div class="ui dividing header">助理 (Assistant)</div>
-          <table>
+          <table class="ui transparent table">
             {% for member in members.assistant %}
             <tr>
               <td>
-                <div class="ui small image">
-                  <img src={{member.photo.url}}>
-                </div>
+                <img class="ui small image" src={{member.photo.url}}>
               </td>
               <td class="info">
                 <h3 class="header">{{member.name_en}} ({{member.name_ch}})</h3>
@@ -163,10 +158,11 @@
                     <p>{{member.research_topic}}</p>
                     {% endif %}
                 </div >
-                  <p class="contact">
-                  <a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a>
-                  <span style="margin-left:2em"> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </span>
-                  </p>
+                <div class="contact">
+                  <p><strong>Contact</strong></p>
+                  <p><a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a></p>
+                  <p> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </p>
+                </div >
               </td>
             </tr>
             {% endfor %}

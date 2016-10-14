@@ -17,11 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 import people.views
 import research.views
+import index.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^members/', people.views.members, name="members"),
     url(r'^research/', research.views.research, name="research"),
-    url(r'^home/', research.views.home, name="home"),
-    url(r'^generic/', research.views.generic, name="generic"),
+    url(r'^', index.views.home, name="index"),
 ]
