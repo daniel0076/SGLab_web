@@ -6,9 +6,17 @@
       <i class="home icon"></i>
       Home
     </a>
+    <a class="item {{ui_ctrl.teacher}}" href={% url 'teacher' %}>
+      <i class="user icon"></i>
+      Teacher
+    </a>
+    <a class="item " href="#">
+      <i class="book icon"></i>
+      Publications
+    </a>
     <a class="item {{ui_ctrl.members}}" href={% url 'members' %}>
       <i class="users icon"></i>
-      Members
+      Lab Members
     </a>
     <a class="item {{ui_ctrl.research}}" href={% url 'research' %} >
       <i class="lab icon"></i>

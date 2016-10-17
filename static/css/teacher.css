@@ -1,0 +1,25 @@
+
+.wrapper{
+  margin:0px auto;
+  width:800px;
+}
+
+.ui.small.image{
+  width:250px;
+}
+
+.info{
+  position: relative;
+}
+.contact{
+  margin-top:1em;
+}
+
+.research_topic{
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+.ui.transparent.table{
+  background-color:transparent;
+}

@@ -2,3 +2,12 @@
   width:90%;
   margin:auto;
 }
+
+#news{
+  width:80%;
+  margin:auto;
+}
+
+.ui.segment.news{
+  background-color:rgba(250,250,250,0.3);
+}

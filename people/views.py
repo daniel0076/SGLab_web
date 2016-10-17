@@ -21,3 +21,15 @@ def members(request):
     ui_ctrl={'members':'active'}
 
     return render(request, 'members.html', locals())
+
+def teacher(request):
+
+    teacher = models.Teacher.objects.all().first()
+    edu = models.TeacherEducation.objects.all()
+    exp = models.TeacherExp.objects.all()
+    awards = models.TeacherAwards.objects.all()
+    mem = models.TeacherMember.objects.all()
+    pub = models.TeacherPublication.objects.all()
+    ui_ctrl={'teacher':'active'}
+
+    return render(request, 'teacher.html', locals())
