@@ -2,16 +2,13 @@
   margin:2em;
 }
 
-#navtop h1{
-  text-align:center;
-}
 
-#navtop p{
-  text-align:center;
-}
 
 .ui.secondary.pointing.menu{
   margin:auto;
-  margin-left:20%;
+}
+
+.item{
+  font-size:1.2em;
 }
 

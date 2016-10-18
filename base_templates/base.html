@@ -12,13 +12,16 @@
     <script src={% static "semantic-ui/dist/semantic.min.js" %}></script>
     <link href={% static "semantic-ui/dist/semantic.min.css" %} rel="stylesheet">
     <link href={% static "css/navtop.css" %} rel="stylesheet">
-    <link href={% static "css/index.css" %} rel="stylesheet">
     <link href={% static "css/main.css" %} rel="stylesheet">
     {% block custom_head %}
     {% endblock %}
   </head>
   <body>
     <div id="container">
+      <div id="lab_title">
+        <h1 class="ui header">Space Geodesy Lab</h1>
+        <p>National Chiao Tung University, Civil Engineering</p>
+      </div>
       {% include 'components/navtop.html' %}
       {% block content %}
       {% endblock %}

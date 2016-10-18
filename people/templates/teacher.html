@@ -21,7 +21,7 @@
 
         <!-- Main -->
           <section id="teacher_info" class="wrapper">
-             <table class="ui transparent table">
+             <table class="ui transparent blue table">
             <tr>
               <td class="info">
                 <h3 class="header">{{teacher.name_en}} ({{teacher.name_ch}})</h3>
@@ -31,8 +31,8 @@
                 </div >
                 <div class="contact">
                   <p><strong>Contact</strong></p>
-                  <p><a href="mailto:{{teacher.email}}"> <i class="mail icon"></i> {{teacher.email}} </a></p>
-                  <p> <i class="phone icon"></i> {{teacher.tel}} #{{teacher.ext}} </p>
+                  <p><a href="mailto:{{teacher.email}}"> <i class="blue mail icon"></i> {{teacher.email}} </a></p>
+                  <p> <i class="blue phone icon"></i> {{teacher.tel}} #{{teacher.ext}} </p>
                 </div >
               </td>
               <td>
@@ -54,7 +54,7 @@
 
         <!-- Experience -->
           <section class="wrapper">
-            <p><i class="bookmark icon"></i><strong>Academic Experience</strong></p>
+            <p><i class="red bookmark icon"></i><strong>Academic Experience</strong></p>
                <ul>
                 {% for each in exp %}
                 <li>{{each.title}}</li>
@@ -64,7 +64,7 @@
 
          <!-- Awards -->
           <section class="wrapper">
-            <p><i class="trophy icon"></i><strong>Honors and Awards</strong></p>
+            <p><i class="yellow trophy icon"></i><strong>Honors and Awards</strong></p>
                <ul>
                 {% for each in awards %}
                 <li>{{each.title}}</li>
@@ -74,7 +74,7 @@
 
          <!-- Members -->
           <section class="wrapper">
-            <p><i class="users icon"></i><strong>Members</strong></p>
+            <p><i class="purple users icon"></i><strong>Members</strong></p>
                <ul>
                 {% for each in mem %}
                 <li>{{each.title}}</li>

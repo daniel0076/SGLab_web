@@ -1,26 +1,29 @@
 <div id="navtop">
-  <h1 class="ui header" id="lab_title">Space Geodesy Lab</h1>
-  <p>National Chiao Tung University, Civil Engineering</p>
-  <div class="ui secondary pointing stackable menu">
-    <a class="item {{ui_ctrl.index}}" href="{% url 'index' %}">
-      <i class="home icon"></i>
-      Home
-    </a>
-    <a class="item {{ui_ctrl.teacher}}" href={% url 'teacher' %}>
-      <i class="user icon"></i>
-      Teacher
-    </a>
-    <a class="item " href="#">
-      <i class="book icon"></i>
-      Publications
-    </a>
-    <a class="item {{ui_ctrl.members}}" href={% url 'members' %}>
-      <i class="users icon"></i>
-      Lab Members
-    </a>
-    <a class="item {{ui_ctrl.research}}" href={% url 'research' %} >
-      <i class="lab icon"></i>
-      Research
-    </a>
+
+  <div class="ui centered grid">
+    <div class="center aligned column">
+      <div class="ui secondary pointing compact stackable menu">
+        <a class="item {{ui_ctrl.index}}" href="{% url 'index' %}">
+          <i class="home icon"></i>
+          Home
+        </a>
+        <a class="item {{ui_ctrl.teacher}}" href={% url 'teacher' %}>
+          <i class="blue user icon"></i>
+          Teacher
+        </a>
+        <a class="item " href="#">
+          <i class="yellow book icon"></i>
+          Publications
+        </a>
+        <a class="item {{ui_ctrl.members}}" href={% url 'members' %}>
+          <i class="teal users icon"></i>
+          Lab Members
+        </a>
+        <a class="item {{ui_ctrl.research}}" href={% url 'research' %} >
+          <i class="red lab icon"></i>
+          Research
+        </a>
+      </div>
+    </div>
   </div>
 </div>
