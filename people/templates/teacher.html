@@ -16,89 +16,82 @@
   </head>
   <body>
 
-  <!-- Wrapper -->
+    <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Main -->
-          <section id="teacher_info" class="wrapper">
-             <table class="ui transparent blue table">
-            <tr>
-              <td class="info">
-                <h3 class="header">{{teacher.name_en}} ({{teacher.name_ch}})</h3>
-                <div class="research_topic">
-                    <p><strong>Research Topic</strong></p>
-                    <p>{{teacher.research_topic}}</p>
-                </div >
-                <div class="contact">
-                  <p><strong>Contact</strong></p>
-                  <p><a href="mailto:{{teacher.email}}"> <i class="blue mail icon"></i> {{teacher.email}} </a></p>
-                  <p> <i class="blue phone icon"></i> {{teacher.tel}} #{{teacher.ext}} </p>
-                </div >
-              </td>
-              <td>
-                <img class="ui centered large image" src={{teacher.photo.url}}>
-              </td>
-            </tr>
-          </table>
-         </section>
+      <!-- Main -->
+      <section id="teacher_info" class="wrapper">
+        <table class="ui transparent blue stackable table">
+          <tr>
+            <td>
+              <h3 class="header">{{teacher.name_en}} ({{teacher.name_ch}})</h3>
+              <div class="research_topic">
+                <p><strong>Research Topic</strong></p>
+                <p>{{teacher.research_topic}}</p>
+              </div >
+              <div class="contact">
+                <p><strong>Contact</strong></p>
+                <p><a href="mailto:{{teacher.email}}"> <i class="blue mail icon"></i> {{teacher.email}} </a></p>
+                <p> <i class="blue phone icon"></i> {{teacher.tel}} #{{teacher.ext}} </p>
+              </div >
+            </td>
+            <td>
+              <img class="ui centered large image" src={{teacher.photo.url}}>
+            </td>
+          </tr>
+        </table>
+      </section>
 
-         <!-- Education -->
-          <section class="wrapper">
-            </br><p><i class="student icon"></i><strong>Education</strong></p>
-               <ul>
-                {% for each in edu %}
-                <li>{{each.title}}</li>
-                {% endfor %}
-               </ul>
-         </section>
+      <!-- Education -->
+      <section class="wrapper">
+        </br><p><i class="student icon"></i><strong>Education</strong></p>
+        <ul>
+          {% for each in edu %}
+          <li>{{each.title}}</li>
+          {% endfor %}
+        </ul>
+      </section>
 
-        <!-- Experience -->
-          <section class="wrapper">
-            <p><i class="red bookmark icon"></i><strong>Academic Experience</strong></p>
-               <ul>
-                {% for each in exp %}
-                <li>{{each.title}}</li>
-                {% endfor %}
-               </ul>
-         </section>
+      <!-- Experience -->
+      <section class="wrapper">
+        <p><i class="red bookmark icon"></i><strong>Academic Experience</strong></p>
+        <ul>
+          {% for each in exp %}
+          <li>{{each.title}}</li>
+          {% endfor %}
+        </ul>
+      </section>
 
-         <!-- Awards -->
-          <section class="wrapper">
-            <p><i class="yellow trophy icon"></i><strong>Honors and Awards</strong></p>
-               <ul>
-                {% for each in awards %}
-                <li>{{each.title}}</li>
-                {% endfor %}
-               </ul>
-         </section>
+      <!-- Awards -->
+      <section class="wrapper">
+        <p><i class="yellow trophy icon"></i><strong>Honors and Awards</strong></p>
+        <ul>
+          {% for each in awards %}
+          <li>{{each.title}}</li>
+          {% endfor %}
+        </ul>
+      </section>
 
-         <!-- Members -->
-          <section class="wrapper">
-            <p><i class="purple users icon"></i><strong>Members</strong></p>
-               <ul>
-                {% for each in mem %}
-                <li>{{each.title}}</li>
-                {% endfor %}
-               </ul>
-         </section>
+      <!-- Members -->
+      <section class="wrapper">
+        <p><i class="purple users icon"></i><strong>Members</strong></p>
+        <ul>
+          {% for each in mem %}
+          <li>{{each.title}}</li>
+          {% endfor %}
+        </ul>
+      </section>
     </div>
 
-       <!-- Footer -->
-        <footer id="footer" class="wrapper style1-alt">
-          <div class="inner">
-            <ul class="menu">
-              <li>&copy; NCTU Space Geodesy Lab. All rights reserved.</li>
-            </ul>
-          </div>
-        </footer>
 
-        <!-- Scripts -->
-        <script src={% static "js/jquery.min.js" %}></script>
-        <script src={% static "js/jquery.scrollex.min.js"%}></script>
-        <script src={% static "js/jquery.scrolly.min.js"%}></script>
-        <script src={% static "js/skel.min.js"%}></script>
-        <script src={% static "js/util.js"%}></script>
-        <script src={% static "js/main.js"%}></script>
+
+    <!-- Scripts -->
+    <script src={% static "js/jquery.min.js" %}></script>
+    <script src={% static "js/jquery.scrollex.min.js"%}></script>
+    <script src={% static "js/jquery.scrolly.min.js"%}></script>
+    <script src={% static "js/skel.min.js"%}></script>
+    <script src={% static "js/util.js"%}></script>
+    <script src={% static "js/main.js"%}></script>
 
   </body>
 </html>

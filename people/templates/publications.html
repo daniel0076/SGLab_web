@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!--
+  Hyperspace by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<html>
+  <head>
+    <title>Space Geodacy Lab, NCTU</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href={% static 'css/members.css' %} />
+  </head>
+  <body>
+
+    <!-- Sidebar -->
+    <section id="sidebar">
+      <div class="inner">
+        <nav>
+          <ul>
+            <li><a href="#one">Journal Paper</a></li>
+            <li><a href="#two">Conference Paper</a></li>
+            <li><a href="#three">Book Chapter</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <h2 class="ui dividing header">
+          Publications of Dr. {{teacher.name_en}} ({{teacher.name_ch}})</h2>
+      <!-- Intro -->
+      <section id="one" class="wrapper style1 fullscreen fade-up">
+        <div class="inner">
+          <h3 class="ui header">Journal Paper</h3>
+          <table class="ui celled stackable striped blue table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>File</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for paper in journal_paper %}
+              <tr>
+                <td>{{paper.title}}</td>
+                <td>
+                  {% if paper.upload_file %}
+                  <a href="{{paper.upload_file.url}}" target="_blank">
+                    <i class="file pdf outline icon"></i>
+                  </a>
+                  {% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+        </div>
+      </section>
+
+      <!-- One -->
+      <section id="two" class="wrapper style2 fullscreen fade-up">
+        <div class="inner">
+          <h3 class="ui header">Conference Paper</h3>
+          <table class="ui celled stackable striped red table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>File</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for paper in conf_paper %}
+              <tr>
+                <td>{{paper.title}}</td>
+                <td>
+                  {% if paper.upload_file %}
+                  <a href="{{paper.upload_file.url}}" target="_blank">
+                    <i class="file pdf outline icon"></i>
+                  </a>
+                  {% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <!-- Two -->
+      <section id="three" class="wrapper style3 fullscreen fade-up">
+        <div class="inner">
+          <h3 class="ui header">Book Chapter</h3>
+          <table class="ui celled stackable striped purple table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>File</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for paper in book_chapter %}
+              <tr>
+                <td>{{paper.title}}</td>
+                <td>
+                  {% if paper.upload_file %}
+                  <a href="{{paper.upload_file.url}}" target="_blank">
+                    <i class="file pdf outline icon"></i>
+                  </a>
+                  {% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+        </div>
+      </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="wrapper style1-alt">
+          <div class="inner">
+            <ul class="menu">
+              <li>&copy; NCTU Space Geodacy Lab. All rights reserved.</li>
+            </ul>
+          </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src={% static "js/jquery.min.js" %}></script>
+        <script src={% static "js/jquery.scrollex.min.js"%}></script>
+        <script src={% static "js/jquery.scrolly.min.js"%}></script>
+        <script src={% static "js/skel.min.js"%}></script>
+        <script src={% static "js/util.js"%}></script>
+        <script src={% static "js/main.js"%}></script>
+
+  </body>
+</html>
+{% endblock %}

@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^members/', people.views.members, name="members"),
     url(r'^research/', research.views.research, name="research"),
     url(r'^teacher/', people.views.teacher, name="teacher"),
+    url(r'^publications/', people.views.publications, name="publications"),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^', index.views.home, name="index"),
 ]

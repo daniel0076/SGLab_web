@@ -78,9 +78,18 @@ class TeacherMember(models.Model):
         verbose_name_plural = u"教授職位"
 
 class TeacherPublication(models.Model):
+    CATEGORY = (
+            ('journal_paper', 'journal_paper'),
+            ('conf_paper', 'conf_paper'),
+            ('book_chapter', 'book_chapter'),
+            )
     title = models.TextField(u'標題')
+    category = models.CharField(u'類型', max_length=32, choices=CATEGORY)
+    date = models.DateTimeField(u'日期')
     upload_file = models.FileField(u'論文PDF上傳',
                                    upload_to='publications', null=True, blank=True)
+    update_time = models.DateTimeField(u'更新時間', auto_now=True)
+
     class Meta:
         managed = True
         verbose_name = u"論文"

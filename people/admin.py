@@ -9,26 +9,27 @@ class MemberAdmin(admin.ModelAdmin):
     list_display = ('name_en', 'name_ch', 'identity', 'email', 'tel', 'ext')
 
 @admin.register(models.Teacher)
-class MemberAdmin(admin.ModelAdmin):
+class TeacherAdmin(admin.ModelAdmin):
     list_display = ('name_en', 'name_ch', 'email', 'tel', 'ext')
 
 @admin.register(models.TeacherEducation)
-class MemberAdmin(admin.ModelAdmin):
+class TeacherEducationAdmin(admin.ModelAdmin):
     list_display = ('title', 'update_time')
 
 @admin.register(models.TeacherExp)
-class MemberAdmin(admin.ModelAdmin):
+class TeacherExpAdmin(admin.ModelAdmin):
     list_display = ('title', 'update_time')
 
 @admin.register(models.TeacherAwards)
-class MemberAdmin(admin.ModelAdmin):
+class TeacherAwardsAdmin(admin.ModelAdmin):
     list_display = ('title', 'update_time')
 
 @admin.register(models.TeacherMember)
-class MemberAdmin(admin.ModelAdmin):
+class TeacherMemberAdmin(admin.ModelAdmin):
     list_display = ('title', 'update_time')
 
 @admin.register(models.TeacherPublication)
-class MemberAdmin(admin.ModelAdmin):
-    list_display = ('title', 'upload_file')
+class TeacherPublicationAdmin(admin.ModelAdmin):
+    search_fields = ['title','category']
+    list_display = ('title', 'category', 'upload_file')
 
