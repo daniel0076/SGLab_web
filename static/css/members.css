@@ -22,9 +22,4 @@
 .ui.transparent.table{
   background-color:transparent;
 }
-@media only screen and (max-device-width: 480px)
-{
-  #journal_paper{
-    font-size:80%;
-  }
-}
+

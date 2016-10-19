@@ -1,7 +1,7 @@
 
 .wrapper{
-  margin:0px auto;
-  width:800px;
+  margin:2em auto;
+  width:70%;
 }
 
 .ui.small.image{
@@ -11,7 +11,7 @@
 .info{
 }
 .contact{
-  margin-top:1em;
+  margin-top:1.5em;
 }
 
 .research_topic{
@@ -21,4 +21,16 @@
 
 .ui.transparent.table{
   background-color:transparent;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .wrapper{
+    margin:auto;
+    margin-top:2em;
+    width:100%;
+  }
+
+  #teacher_photo{
+    max-width:300px;
+  }
 }

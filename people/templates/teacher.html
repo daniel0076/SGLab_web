@@ -21,10 +21,10 @@
 
       <!-- Main -->
       <section id="teacher_info" class="wrapper">
-        <table class="ui transparent blue stackable table">
+        <table class="ui transparent blue table">
           <tr>
             <td>
-              <h3 class="header">{{teacher.name_en}} ({{teacher.name_ch}})</h3>
+              <h2 class="header">{{teacher.name_en}} ({{teacher.name_ch}})</h2>
               <div class="research_topic">
                 <p><strong>Research Topic</strong></p>
                 <p>{{teacher.research_topic}}</p>
@@ -36,7 +36,7 @@
               </div >
             </td>
             <td>
-              <img class="ui centered large image" src={{teacher.photo.url}}>
+              <img class="ui large image" id="teacher_photo" src={{teacher.photo.url}}>
             </td>
           </tr>
         </table>
@@ -44,18 +44,28 @@
 
       <!-- Education -->
       <section class="wrapper">
-        </br><p><i class="student icon"></i><strong>Education</strong></p>
-        <ul>
-          {% for each in edu %}
-          <li>{{each.title}}</li>
-          {% endfor %}
-        </ul>
+        <h3 class="ui dividing header">
+          <i class="student icon"></i>
+          <div class="content">
+            Education
+          </div>
+        </h3>
+          <ul class="ui list">
+            {% for each in edu %}
+            <li>{{each.title}}</li>
+            {% endfor %}
+          </ul>
       </section>
 
       <!-- Experience -->
       <section class="wrapper">
-        <p><i class="red bookmark icon"></i><strong>Academic Experience</strong></p>
-        <ul>
+        <h3 class="ui dividing header">
+          <i class="red bookmark icon"></i>
+          <div class="content">
+            Academic Experience
+          </div>
+        </h3>
+        <ul class="ui list">
           {% for each in exp %}
           <li>{{each.title}}</li>
           {% endfor %}
@@ -64,8 +74,13 @@
 
       <!-- Awards -->
       <section class="wrapper">
-        <p><i class="yellow trophy icon"></i><strong>Honors and Awards</strong></p>
-        <ul>
+        <h3 class="ui dividing header">
+          <i class="yellow trophy icon"></i>
+          <div class="content">
+            Honors and Awards
+          </div>
+        </h3>
+        <ul class="ui list">
           {% for each in awards %}
           <li>{{each.title}}</li>
           {% endfor %}
@@ -74,15 +89,28 @@
 
       <!-- Members -->
       <section class="wrapper">
-        <p><i class="purple users icon"></i><strong>Members</strong></p>
-        <ul>
+        <h3 class="ui dividing header">
+          <i class="purple user icon"></i>
+          <div class="content">
+            Members
+          </div>
+        </h3>
+        <ul class="ui list">
           {% for each in mem %}
           <li>{{each.title}}</li>
           {% endfor %}
         </ul>
       </section>
+
     </div>
 
+    <footer id="footer" class="wrapper style1-alt">
+      <div class="inner">
+        <ul class="menu">
+          <li>&copy; NCTU Space Geodesy Lab. All rights reserved.</li>
+        </ul>
+      </div>
+    </footer>
 
 
     <!-- Scripts -->

@@ -5,3 +5,13 @@
 p{
   text-align:justify;
 }
+
+#research_one{
+  margin-top:-15em;
+}
+
+@media only screen and (max-device-width: 480px) {
+  #research_one{
+    margin-top:0em;
+  }
+}
