@@ -6,15 +6,11 @@
 -->
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% block content %}
-<html>
-  <head>
-    <title>Space Geodacy Lab, NCTU</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+{% block custom_head %}
     <link rel="stylesheet" href={% static 'css/members.css' %} />
-  </head>
-  <body>
+{% endblock %}
+
+{% block content %}
 
     <!-- Sidebar -->
     <section id="sidebar">
@@ -32,13 +28,13 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <h2 class="ui dividing header">
-          Publications of Dr. {{teacher.name_en}} ({{teacher.name_ch}})</h2>
+      <h2 class="ui dividing header">
+        Publications of Dr. {{teacher.name_en}} ({{teacher.name_ch}})</h2>
       <!-- Intro -->
       <section id="one" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
           <h3 class="ui header">Journal Paper</h3>
-          <table class="ui celled stackable striped blue table">
+          <table class="ui celled tablet stackable striped blue table" id="journal_paper">
             <thead>
               <tr>
                 <th>Title</th>
@@ -68,7 +64,7 @@
       <section id="two" class="wrapper style2 fullscreen fade-up">
         <div class="inner">
           <h3 class="ui header">Conference Paper</h3>
-          <table class="ui celled stackable striped red table">
+          <table class="ui celled tablet stackable striped red table">
             <thead>
               <tr>
                 <th>Title</th>
@@ -98,7 +94,7 @@
       <section id="three" class="wrapper style3 fullscreen fade-up">
         <div class="inner">
           <h3 class="ui header">Book Chapter</h3>
-          <table class="ui celled stackable striped purple table">
+          <table class="ui celled tablet stackable striped purple table">
             <thead>
               <tr>
                 <th>Title</th>
@@ -124,24 +120,24 @@
         </div>
       </section>
 
-        </div>
+    </div>
 
-        <!-- Footer -->
-        <footer id="footer" class="wrapper style1-alt">
-          <div class="inner">
-            <ul class="menu">
-              <li>&copy; NCTU Space Geodacy Lab. All rights reserved.</li>
-            </ul>
-          </div>
-        </footer>
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+      <div class="inner">
+        <ul class="menu">
+          <li>&copy; NCTU Space Geodacy Lab. All rights reserved.</li>
+        </ul>
+      </div>
+    </footer>
 
-        <!-- Scripts -->
-        <script src={% static "js/jquery.min.js" %}></script>
-        <script src={% static "js/jquery.scrollex.min.js"%}></script>
-        <script src={% static "js/jquery.scrolly.min.js"%}></script>
-        <script src={% static "js/skel.min.js"%}></script>
-        <script src={% static "js/util.js"%}></script>
-        <script src={% static "js/main.js"%}></script>
+    <!-- Scripts -->
+    <script src={% static "js/jquery.min.js" %}></script>
+    <script src={% static "js/jquery.scrollex.min.js"%}></script>
+    <script src={% static "js/jquery.scrolly.min.js"%}></script>
+    <script src={% static "js/skel.min.js"%}></script>
+    <script src={% static "js/util.js"%}></script>
+    <script src={% static "js/main.js"%}></script>
 
   </body>
 </html>

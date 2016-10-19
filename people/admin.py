@@ -31,5 +31,5 @@ class TeacherMemberAdmin(admin.ModelAdmin):
 @admin.register(models.TeacherPublication)
 class TeacherPublicationAdmin(admin.ModelAdmin):
     search_fields = ['title','category']
-    list_display = ('title', 'category', 'upload_file')
+    list_display = ('title', 'category','date', 'upload_file')
 
