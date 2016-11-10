@@ -35,9 +35,9 @@
 
   {% for article in articles %}
   <section id="{{article.id}}" class="wrapper {{article.style}} fullscreen fade-up">
-    <div class="inner" id="research_one">
+    <div class="inner">
       <h2>{{article.title}}</h2>
-      <p>{{article.content|safe}}</p>
+      {{article.content|safe}}
     </div>
   </section>
   {% endfor %}
