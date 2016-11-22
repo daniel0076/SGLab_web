@@ -35,9 +35,9 @@ def teacher(request):
 
 def publications(request):
     teacher = models.Teacher.objects.all().first()
-    journal_paper = models.TeacherPublication.objects.filter(category='journal_paper').order_by('date')
-    conf_paper = models.TeacherPublication.objects.filter(category='conf_paper').order_by('date')
-    book_chapter = models.TeacherPublication.objects.filter(category='book_chapter').order_by('date')
+    journal_paper = models.TeacherPublication.objects.filter(category='journal_paper').order_by('-date')
+    conf_paper = models.TeacherPublication.objects.filter(category='conf_paper').order_by('-date')
+    book_chapter = models.TeacherPublication.objects.filter(category='book_chapter').order_by('-date')
 
     ui_ctrl={'publications':'active'}
     return render(request, 'publications.html', locals())

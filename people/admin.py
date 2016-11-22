@@ -30,6 +30,7 @@ class TeacherMemberAdmin(admin.ModelAdmin):
 
 @admin.register(models.TeacherPublication)
 class TeacherPublicationAdmin(admin.ModelAdmin):
+    list_filter = ('category','date')
     search_fields = ['title','category']
     list_display = ('title', 'category','date', 'upload_file')
 

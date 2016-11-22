@@ -7,7 +7,8 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block custom_head %}
-<link rel="stylesheet" href={% static 'css/research.css' %} />
+    <link rel="stylesheet" href={% static 'css/research.css' %} />
+    <script src={% static "js/research.js" %}></script>
 {% endblock %}
 
 {% block content %}
@@ -23,7 +24,6 @@
     </nav>
   </div>
 </section>
-
 <!-- Wrapper -->
 <div id="wrapper">
 
@@ -34,12 +34,12 @@
   </div>
 
   {% for article in articles %}
-  <section id="{{article.id}}" class="wrapper {{article.style}} fullscreen fade-up">
+  <div id="{{article.id}}" class="wrapper {{article.style}} fullscreen fade-up ui stackable segment">
     <div class="inner">
       <h2>{{article.title}}</h2>
       {{article.content|safe}}
     </div>
-  </section>
+  </div >
   {% endfor %}
 
 </div>
