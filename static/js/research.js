@@ -8,11 +8,11 @@ $( document ).ready(function() {
     }
     else if($(this).width()<1200 && $(this).width()>600)
     {
-      $(this).addClass("ui medium image");
+      $(this).addClass("ui large image");
     }
     else if($(this).width()>1200)
     {
-      $(this).addClass("ui big image");
+      $(this).addClass("ui huge image");
     }
 
   });

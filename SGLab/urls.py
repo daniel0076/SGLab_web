@@ -18,14 +18,16 @@ from django.contrib import admin
 import people.views
 import research.views
 import index.views
+import other.views
 
 urlpatterns = [
     url(r'^news/(?P<news_id>[0-9].*)/$', index.views.ReadNews),
     url(r'^admin/', admin.site.urls),
-    url(r'^members/', people.views.members, name="members"),
-    url(r'^research/', research.views.research, name="research"),
-    url(r'^teacher/', people.views.teacher, name="teacher"),
-    url(r'^publications/', people.views.publications, name="publications"),
+    url(r'^members/$', people.views.members, name="members"),
+    url(r'^research/$', research.views.research, name="research"),
+    url(r'^teacher/$', people.views.teacher, name="teacher"),
+    url(r'^publications/$', people.views.publications, name="publications"),
+    url(r'^links/$', other.views.external_links, name="links"),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^', index.views.home, name="index"),
 ]
