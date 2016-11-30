@@ -1,0 +1,28 @@
+#navtop{
+  margin:2em;
+}
+
+.ui.secondary.pointing.menu{
+  margin:auto;
+  margin-left:8em;
+}
+
+.item{
+  font-size:1.2em;
+}
+
+@media only screen and (max-device-width: 480px) {
+
+  #navtop{
+    margin:2em;
+  }
+
+  .ui.secondary.pointing.menu{
+    margin:auto;
+  }
+
+  .item{
+    font-size:1.2em;
+  }
+
+}
