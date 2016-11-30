@@ -46,6 +46,7 @@ class Teacher(models.Model):
 class TeacherEducation(models.Model):
     title = models.TextField(u'學歷標題')
     update_time = models.DateTimeField(u'更新時間', auto_now=True)
+    order = models.IntegerField(u'排序', help_text="大的在前", default = 1)
 
     class Meta:
         managed = True
@@ -56,6 +57,7 @@ class TeacherEducation(models.Model):
 class TeacherExp(models.Model):
     title = models.TextField(u'學術經驗')
     update_time = models.DateTimeField(u'更新時間', auto_now=True)
+    order = models.IntegerField(u'排序', help_text="大的在前", default = 1)
     class Meta:
         managed = True
         verbose_name = u"教授學術經驗"
@@ -64,6 +66,7 @@ class TeacherExp(models.Model):
 class TeacherAwards(models.Model):
     title = models.TextField(u'榮譽與成就')
     update_time = models.DateTimeField(u'更新時間', auto_now=True)
+    order = models.IntegerField(u'排序', help_text="大的在前", default = 1)
     class Meta:
         managed = True
         verbose_name = u"教授榮譽與成就"
@@ -72,6 +75,7 @@ class TeacherAwards(models.Model):
 class TeacherMember(models.Model):
     title = models.TextField(u'成員')
     update_time = models.DateTimeField(u'更新時間', auto_now=True)
+    order = models.IntegerField(u'排序', help_text="大的在前", default = 1)
     class Meta:
         managed = True
         verbose_name = u"教授職位"

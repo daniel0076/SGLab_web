@@ -14,19 +14,19 @@ class TeacherAdmin(admin.ModelAdmin):
 
 @admin.register(models.TeacherEducation)
 class TeacherEducationAdmin(admin.ModelAdmin):
-    list_display = ('title', 'update_time')
+    list_display = ('order', 'title', 'update_time')
 
 @admin.register(models.TeacherExp)
 class TeacherExpAdmin(admin.ModelAdmin):
-    list_display = ('title', 'update_time')
+    list_display = ('order','title', 'update_time')
 
 @admin.register(models.TeacherAwards)
 class TeacherAwardsAdmin(admin.ModelAdmin):
-    list_display = ('title', 'update_time')
+    list_display = ('order','title', 'update_time')
 
 @admin.register(models.TeacherMember)
 class TeacherMemberAdmin(admin.ModelAdmin):
-    list_display = ('title', 'update_time')
+    list_display = ('order','title', 'update_time')
 
 @admin.register(models.TeacherPublication)
 class TeacherPublicationAdmin(admin.ModelAdmin):

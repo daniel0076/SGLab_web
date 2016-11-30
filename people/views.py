@@ -25,10 +25,10 @@ def members(request):
 def teacher(request):
 
     teacher = models.Teacher.objects.all().first()
-    edu = models.TeacherEducation.objects.all()
-    exp = models.TeacherExp.objects.all()
-    awards = models.TeacherAwards.objects.all()
-    mem = models.TeacherMember.objects.all()
+    edu = models.TeacherEducation.objects.all().order_by('-order')
+    exp = models.TeacherExp.objects.all().order_by('-order')
+    awards = models.TeacherAwards.objects.all().order_by('-order')
+    mem = models.TeacherMember.objects.all().order_by('-order')
     ui_ctrl={'teacher':'active'}
 
     return render(request, 'teacher.html', locals())
