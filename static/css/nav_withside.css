@@ -2,8 +2,8 @@
   margin:2em;
 }
 
-#sidebar + .ui.secondary.pointing.menu{
-  margin-left:18em;
+.ui.secondary.pointing.menu{
+  margin-left:10em;
 }
 
 .item{
