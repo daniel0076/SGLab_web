@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <!--
   Hyperspace by HTML5 UP
   html5up.net | @ajlkn
@@ -23,8 +23,8 @@
         <nav>
           <ul>
             <li><a href="#postdoc">博士後研究 (PostDoc)</a></li>
-            <li><a href="#one">博士 (PhD)</a></li>
-            <li><a href="#two">碩士 (Master)</a></li>
+            <li><a href="#one">博士生 (PhD Students)</a></li>
+            <li><a href="#two">碩士生 (Master Students)</a></li>
             <li><a href="#three">助理 (Assistant)</a></li>
           </ul>
         </nav>
@@ -66,6 +66,12 @@
                   <p><a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a></p>
                   <p> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </p>
                 </div >
+                {% if member.other %}
+                <div class="other">
+                    <p><strong>Other</strong></p>
+                    <p>{{member.other}}</p>
+                </div>
+                {% endif %}
               </td>
             </tr>
             {% endfor %}
@@ -76,7 +82,7 @@
       <!-- One -->
       <section id="one" class="wrapper style2 fullscreen fade-up">
         <div class="inner">
-          <div class="ui dividing header">博士 (PhD)</div>
+          <div class="ui dividing header">博士生 (PhD Students)</div>
           <table class="ui transparent table">
             {% for member in members.phd %}
             <tr>
@@ -100,6 +106,13 @@
                   <p><a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a></p>
                   <p> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </p>
                 </div >
+                {% if member.other %}
+                <div class="other">
+                    <p><strong>Other</strong></p>
+                    <p>{{member.other}}</p>
+                </div>
+                {% endif %}
+
               </td>
             </tr>
             {% endfor %}
@@ -111,7 +124,7 @@
       <!-- Two -->
       <section id="two" class="wrapper style3 fullscreen fade-up">
         <div class="inner">
-          <div class="ui dividing header">碩士 (Master)</div>
+          <div class="ui dividing header">碩士生 (Master Students)</div>
           <table class="ui transparent table">
             {% for member in members.master %}
             <tr>
@@ -135,6 +148,13 @@
                   <p><a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a></p>
                   <p> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </p>
                 </div >
+                {% if member.other %}
+                <div class="other">
+                    <p><strong>Other</strong></p>
+                    <p>{{member.other}}</p>
+                </div>
+                {% endif %}
+
               </td>
             </tr>
             {% endfor %}
@@ -169,6 +189,13 @@
                   <p><a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a></p>
                   <p> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </p>
                 </div >
+                {% if member.other %}
+                <div class="other">
+                    <p><strong>Other</strong></p>
+                    <p>{{member.other}}</p>
+                </div>
+                {% endif %}
+
               </td>
             </tr>
             {% endfor %}
@@ -182,7 +209,7 @@
     <footer id="footer" class="wrapper style1-alt">
       <div class="inner">
         <ul class="menu">
-          <li>&copy; NCTU Space Geodacy Lab. All rights reserved.</li>
+          <li>&copy; NCTU Space Geodesy Lab. All rights reserved.</li>
         </ul>
       </div>
     </footer>

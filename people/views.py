@@ -38,6 +38,7 @@ def publications(request):
     journal_paper = models.TeacherPublication.objects.filter(category='journal_paper').order_by('-date')
     conf_paper = models.TeacherPublication.objects.filter(category='conf_paper').order_by('-date')
     book_chapter = models.TeacherPublication.objects.filter(category='book_chapter').order_by('-date')
+    under_review = models.TeacherPublication.objects.filter(category='under_review').order_by('-date')
 
     ui_ctrl={'publications':'active'}
     return render(request, 'publications.html', locals())

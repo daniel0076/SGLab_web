@@ -21,6 +21,7 @@
         <li><a href="#one">Journal Paper</a></li>
         <li><a href="#two">Conference Paper</a></li>
         <li><a href="#three">Book Chapter</a></li>
+		<li><a href="#four">Under Review</a></li>
       </ul>
     </nav>
   </div>
@@ -126,7 +127,34 @@
           {% endfor %}
         </tbody>
       </table>
-
+    </div>
+  </section>
+  
+  <section id="four" class="wrapper style4 fullscreen fade-up">
+    <div class="inner">
+      <h3 class="ui header">Under Review</h3>
+      <table class="ui celled tablet stackable striped purple table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>File</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for paper in under_review %}
+          <tr>
+            <td>{{paper.title}}</td>
+            <td>
+              {% if paper.upload_file %}
+              <a href="{{paper.upload_file.url}}" target="_blank">
+                <i class="file pdf outline icon"></i>
+              </a>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -136,7 +164,7 @@
 <footer id="footer" class="wrapper style1-alt">
   <div class="inner">
     <ul class="menu">
-      <li>&copy; NCTU Space Geodacy Lab. All rights reserved.</li>
+      <li>&copy; NCTU Space Geodesy Lab. All rights reserved.</li>
     </ul>
   </div>
 </footer>

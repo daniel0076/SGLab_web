@@ -21,6 +21,7 @@ class Member(models.Model):
     email = models.EmailField(u'Email', null=True, blank=True)
     photo = models.ImageField(u'Photo', upload_to='member_photos',
                               null=True, blank=True)
+    other = models.TextField(u'Other', blank=True)
 
     class Meta:
         managed = True
@@ -86,6 +87,7 @@ class TeacherPublication(models.Model):
             ('journal_paper', 'journal_paper'),
             ('conf_paper', 'conf_paper'),
             ('book_chapter', 'book_chapter'),
+			('under_review', 'under_review'),
             )
     title = models.TextField(u'標題')
     category = models.CharField(u'類型', max_length=32, choices=CATEGORY)
