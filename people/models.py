@@ -9,6 +9,11 @@ class Member(models.Model):
         ('Master Student', 'Master Student'),
         ('Assistant', 'Assistant'),
     )
+    GRADUATE = (
+        ('Not Graduated', '未畢業'),
+        ('Graduated', '已畢業'),
+        ('Other', '其他')
+    )
     id = models.AutoField(primary_key=True)
     identity = models.CharField(u'Identity', max_length=32, choices=IDENTITY)
     name_en = models.CharField(u'Name(EN)', max_length=64)
@@ -16,12 +21,13 @@ class Member(models.Model):
     highest_edu_en = models.CharField(u'Highest Education(EN)', max_length=256, blank=True)
     highest_edu_ch = models.CharField(u'最高學歷(中文)', max_length=256, blank=True)
     research_topic = models.TextField(u'Research Topic', blank=True)
+    graduate = models.CharField(u'學生狀況', max_length=32, choices=GRADUATE, default='Not Graduated')
     tel = models.CharField(u'Tel', max_length=32, blank=True)
     ext = models.CharField(u'Ext', max_length=10, blank=True)
     email = models.EmailField(u'Email', null=True, blank=True)
     photo = models.ImageField(u'Photo', upload_to='member_photos',
                               null=True, blank=True)
-    other = models.TextField(u'Other', blank=True)
+    other = models.TextField(u'Other', null=True, blank=True)
 
     class Meta:
         managed = True

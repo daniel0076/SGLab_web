@@ -23,9 +23,11 @@
         <nav>
           <ul>
             <li><a href="#postdoc">博士後研究 (PostDoc)</a></li>
-            <li><a href="#one">博士生 (PhD Students)</a></li>
-            <li><a href="#two">碩士生 (Master Students)</a></li>
-            <li><a href="#three">助理 (Assistant)</a></li>
+            <li><a href="#one">畢業博士生 (Graduated PhD Students)</a></li>
+            <li><a href="#two">博士生 (PhD Students)</a></li>
+            <li><a href="#three">畢業碩士生 (Graduated Master Students)</a></li>
+            <li><a href="#four">碩士生 (Master Students)</a></li>
+            <li><a href="#five">助理 (Assistant)</a></li>
           </ul>
         </nav>
       </div>
@@ -82,9 +84,10 @@
       <!-- One -->
       <section id="one" class="wrapper style2 fullscreen fade-up">
         <div class="inner">
-          <div class="ui dividing header">博士生 (PhD Students)</div>
+          <div class="ui dividing header">畢業博士生 (Graduated PhD Students)</div>
           <table class="ui transparent table">
             {% for member in members.phd %}
+            {% if member.graduate == 'Graduated' %}
             <tr>
               <td>
                 <img class="ui small image" src={{member.photo.url}}>
@@ -115,18 +118,19 @@
 
               </td>
             </tr>
+            {% endif %}
             {% endfor %}
           </table>
         </div>
       </section>
-
-
+      
       <!-- Two -->
-      <section id="two" class="wrapper style3 fullscreen fade-up">
+      <section id="two" class="wrapper style2 fullscreen fade-up">
         <div class="inner">
-          <div class="ui dividing header">碩士生 (Master Students)</div>
+          <div class="ui dividing header">博士生 (PhD Students)</div>
           <table class="ui transparent table">
-            {% for member in members.master %}
+            {% for member in members.phd %}
+            {% if member.graduate == 'Not Graduated' %}
             <tr>
               <td>
                 <img class="ui small image" src={{member.photo.url}}>
@@ -157,13 +161,101 @@
 
               </td>
             </tr>
+            {% endif %}
             {% endfor %}
           </table>
         </div>
       </section>
 
       <!-- Three -->
-      <section id="three" class="wrapper style1 fade-up">
+      <section id="three" class="wrapper style3 fullscreen fade-up">
+        <div class="inner">
+          <div class="ui dividing header">畢業碩士生 (Graduated Master Students)</div>
+          <table class="ui transparent table">
+            {% for member in members.master %}
+            {% if member.graduate == 'Graduated' %}
+            <tr>
+              <td>
+                <img class="ui small image" src={{member.photo.url}}>
+              </td>
+              <td class="info">
+                <h3 class="header">{{member.name_en}} ({{member.name_ch}})</h3>
+                <div class="education">
+                  <p>{{member.highest_edu_en}}</p>
+                  <p>{{member.highest_edu_ch}}</p>
+                </div >
+                <div class="research_topic">
+                  {% if member.research_topic %}</p>
+                  <p><strong>Research Topic</strong></p>
+                  <p>{{member.research_topic}}</p>
+                  {% endif %}
+                </div >
+                <div class="contact">
+                  <p><strong>Contact</strong></p>
+                  <p><a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a></p>
+                  <p> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </p>
+                </div >
+                {% if member.other %}
+                <div class="other">
+                    <p><strong>Other</strong></p>
+                    <p>{{member.other}}</p>
+                </div>
+                {% endif %}
+
+              </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+          </table>
+        </div>
+      </section>
+      
+      <!-- Four -->
+      <section id="four" class="wrapper style3 fullscreen fade-up">
+        <div class="inner">
+          <div class="ui dividing header">碩士生 (Master Students)</div>
+          <table class="ui transparent table">
+            {% for member in members.master %}
+            {% if member.graduate == 'Not Graduated' %}
+            <tr>
+              <td>
+                <img class="ui small image" src={{member.photo.url}}>
+              </td>
+              <td class="info">
+                <h3 class="header">{{member.name_en}} ({{member.name_ch}})</h3>
+                <div class="education">
+                  <p>{{member.highest_edu_en}}</p>
+                  <p>{{member.highest_edu_ch}}</p>
+                </div >
+                <div class="research_topic">
+                  {% if member.research_topic %}</p>
+                  <p><strong>Research Topic</strong></p>
+                  <p>{{member.research_topic}}</p>
+                  {% endif %}
+                </div >
+                <div class="contact">
+                  <p><strong>Contact</strong></p>
+                  <p><a href="mailto:{{member.email}}"> <i class="mail icon"></i> {{member.email}} </a></p>
+                  <p> <i class="phone icon"></i> {{member.tel}} #{{member.ext}} </p>
+                </div >
+                {% if member.other %}
+                <div class="other">
+                    <p><strong>Other</strong></p>
+                    <p>{{member.other}}</p>
+                </div>
+                {% endif %}
+
+              </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+          </table>
+        </div>
+      </section>
+
+
+      <!-- Five -->
+      <section id="five" class="wrapper style1 fade-up">
         <div class="inner">
           <div class="ui dividing header">助理 (Assistant)</div>
           <table class="ui transparent table">
