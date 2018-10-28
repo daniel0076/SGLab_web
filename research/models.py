@@ -16,7 +16,7 @@ class Research(models.Model):
     sidebar_text = models.TextField(u'側邊欄文字')
     content = RichTextUploadingField(u'內容')
     order = models.IntegerField(u'排版順序', help_text=u'希望出現在第幾塊區域')
-    style = models.CharField(u'背景樣式', max_length=10,choices = STYLE, default = "style1")
+    style = models.CharField(u'背景樣式', max_length=10, choices = STYLE, default = "style1")
     created_time = models.DateTimeField(u'發佈時間', auto_now_add=True)
     updated_time = models.DateTimeField(u'更新時間', auto_now=True)
 

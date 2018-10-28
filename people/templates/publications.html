@@ -48,6 +48,7 @@
       <table class="ui celled tablet stackable striped blue table" id="journal_paper">
         <thead>
           <tr>
+            <th></th>
             <th>Title</th>
             <th>File</th>
           </tr>
@@ -55,6 +56,7 @@
         <tbody>
           {% for paper in journal_paper %}
           <tr>
+            <td>{{paper.listid}}</td>
             <td>{{paper.title}}</td>
             <td>
               {% if paper.upload_file %}
@@ -80,11 +82,13 @@
           <tr>
             <th>Title</th>
             <th>File</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           {% for paper in conf_paper %}
           <tr>
+            <td>{{paper.listid}}</td>
             <td>{{paper.title}}</td>
             <td>
               {% if paper.upload_file %}
@@ -108,6 +112,7 @@
       <table class="ui celled tablet stackable striped purple table">
         <thead>
           <tr>
+            <th></th>
             <th>Title</th>
             <th>File</th>
           </tr>
@@ -115,6 +120,7 @@
         <tbody>
           {% for paper in book_chapter %}
           <tr>
+            <td>{{paper.listid}}</td>
             <td>{{paper.title}}</td>
             <td>
               {% if paper.upload_file %}
@@ -133,9 +139,10 @@
   <section id="four" class="wrapper style4 fullscreen fade-up">
     <div class="inner">
       <h3 class="ui header">Under Review</h3>
-      <table class="ui celled tablet stackable striped purple table">
+      <table class="ui celled tablet stackable striped pink table">
         <thead>
           <tr>
+            <th></th>
             <th>Title</th>
             <th>File</th>
           </tr>
@@ -143,6 +150,7 @@
         <tbody>
           {% for paper in under_review %}
           <tr>
+            <td>{{paper.listid}}</td>
             <td>{{paper.title}}</td>
             <td>
               {% if paper.upload_file %}

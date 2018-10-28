@@ -18,19 +18,19 @@ class TeacherEducationAdmin(admin.ModelAdmin):
 
 @admin.register(models.TeacherExp)
 class TeacherExpAdmin(admin.ModelAdmin):
-    list_display = ('order','title', 'update_time')
+    list_display = ('order', 'title', 'update_time')
 
 @admin.register(models.TeacherAwards)
 class TeacherAwardsAdmin(admin.ModelAdmin):
-    list_display = ('order','title', 'update_time')
+    list_display = ('order', 'title', 'update_time')
 
 @admin.register(models.TeacherMember)
 class TeacherMemberAdmin(admin.ModelAdmin):
-    list_display = ('order','title', 'update_time')
+    list_display = ('order', 'title', 'update_time')
 
 @admin.register(models.TeacherPublication)
 class TeacherPublicationAdmin(admin.ModelAdmin):
-    list_filter = ('category','date')
-    search_fields = ['title','category']
-    list_display = ('title', 'category','date', 'upload_file')
+    list_filter = ('listid', 'category', 'date')
+    search_fields = ['listid', 'title', 'category']
+    list_display = ('listid', 'title', 'category', 'date', 'upload_file')
 

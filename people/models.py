@@ -93,8 +93,9 @@ class TeacherPublication(models.Model):
             ('journal_paper', 'journal_paper'),
             ('conf_paper', 'conf_paper'),
             ('book_chapter', 'book_chapter'),
-			('under_review', 'under_review'),
+	    ('under_review', 'under_review'),
             )
+    listid = models.PositiveIntegerField(u'排列順序', null=True)
     title = models.TextField(u'標題')
     category = models.CharField(u'類型', max_length=32, choices=CATEGORY)
     date = models.DateTimeField(u'日期')
